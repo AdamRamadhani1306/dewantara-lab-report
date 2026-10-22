@@ -1,0 +1,128 @@
+/* =========================================================
+   DELAPORT - tema merah marun (dipakai index.php & admin.php)
+   ========================================================= */
+:root {
+  --maroon: #80000B;
+  --maroon-dark: #5B0710;
+  --maroon-ring: rgba(128, 0, 11, .28);
+  --warm-white: #F8F7F5;
+  --text: #252525;
+  --text-muted: #5C5F63;
+  --border: #D8D4CF;
+  --danger: #B42318;
+}
+
+/* ---------- Latar belakang laboratorium (gambar: assets/bg-lab.jpg) ---------- */
+.tema-bg {
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(30, 0, 6, .68), rgba(30, 0, 6, .84)),
+    url('bg-lab.jpg') center / cover no-repeat fixed,
+    #2a0409;
+}
+@media (max-width: 767.98px) { .tema-bg { background-attachment: scroll; } }
+
+/* ---------- Header ---------- */
+.nav-maroon { background: var(--maroon-dark); border-bottom: 3px solid var(--maroon); padding-block: .6rem; }
+.nav-maroon > .container { flex-wrap: nowrap; gap: .75rem; }
+.brand { display: flex; align-items: center; gap: .6rem; margin: 0; min-width: 0; }
+.brand-text { font-weight: 700; font-size: 1.15rem; letter-spacing: .06em; line-height: 1; }
+.logo-badge { display: block; width: auto; max-width: 100%; background: #fff; border-radius: .5rem; padding: .2rem .45rem; object-fit: contain; }
+.logo-navbar { height: 40px; }
+.btn-admin {
+  display: inline-flex; align-items: center; gap: .4rem; flex: none;
+  min-height: 44px; padding-inline: .9rem; font-weight: 600; border-radius: .5rem;
+  border-color: rgba(255, 255, 255, .75);
+}
+.nav-maroon .btn:focus-visible { box-shadow: 0 0 0 .22rem rgba(255, 255, 255, .55); }
+
+/* ---------- Hero ---------- */
+.hero { color: #fff; padding: 2rem 0 1.5rem; }
+.hero h1 { font-size: clamp(1.25rem, 4.6vw, 1.75rem); font-weight: 700; margin-bottom: .35rem; }
+.hero p { color: rgba(255, 255, 255, .88); margin: 0; }
+
+/* ---------- Kartu & formulir ---------- */
+.form-wrap { max-width: 720px; margin-inline: auto; }
+.card-form { background: var(--warm-white); border: 0; border-radius: .875rem; box-shadow: 0 10px 30px rgba(0, 0, 0, .28); }
+.form-note { color: var(--text-muted); font-size: .875rem; margin-bottom: 1.1rem; }
+.req { color: var(--maroon); font-weight: 700; }
+.opt { color: var(--text-muted); font-weight: 400; font-size: .875em; }
+
+.form-label { font-weight: 600; color: var(--text); margin-bottom: .35rem; }
+.form-control, .form-select {
+  min-height: 46px; padding: .6rem .85rem; color: var(--text); background-color: #fff;
+  border: 1px solid var(--border); border-radius: .5rem; scroll-margin-block: 5rem;
+}
+textarea.form-control { min-height: 120px; resize: vertical; }
+textarea.form-control.kecil { min-height: 88px; }
+.form-control::placeholder { color: #6F7276; opacity: 1; }
+.form-text { color: var(--text-muted); font-size: .85rem; }
+.form-control:focus, .form-select:focus { border-color: var(--maroon); box-shadow: 0 0 0 .22rem var(--maroon-ring); }
+.form-control.is-invalid { border-color: var(--danger); }
+.form-control.is-invalid:focus { box-shadow: 0 0 0 .22rem rgba(180, 35, 24, .25); }
+.invalid-feedback { color: var(--danger); font-size: .875rem; }
+
+/* Pratinjau foto */
+.foto-preview {
+  display: flex; align-items: center; gap: .75rem; max-width: 100%;
+  margin-top: .75rem; padding: .5rem; background: #fff;
+  border: 1px solid var(--border); border-radius: .5rem;
+}
+.foto-preview img { width: 72px; height: 72px; flex: none; object-fit: cover; border-radius: .4rem; }
+.foto-preview .meta { flex: 1; min-width: 0; }
+.foto-preview .nama { font-weight: 600; font-size: .9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.foto-preview .ukuran { font-size: .8rem; color: var(--text-muted); }
+.btn-hapus-foto { flex: none; width: 44px; height: 44px; padding: 0; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
+
+/* Tombol */
+.btn-primary {
+  --bs-btn-color: #fff; --bs-btn-bg: #80000B; --bs-btn-border-color: #80000B;
+  --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #5B0710; --bs-btn-hover-border-color: #5B0710;
+  --bs-btn-active-color: #fff; --bs-btn-active-bg: #4a0710; --bs-btn-active-border-color: #4a0710;
+  --bs-btn-disabled-color: #fff; --bs-btn-disabled-bg: #80000B; --bs-btn-disabled-border-color: #80000B;
+  --bs-btn-focus-shadow-rgb: 128, 0, 11;
+}
+.btn-submit { min-height: 52px; font-weight: 600; font-size: 1.05rem; border-radius: .5rem; scroll-margin-block: 5rem; }
+.foot-note { color: rgba(255, 255, 255, .78); }
+
+.btn-outline-primary {
+  --bs-btn-color: #80000B; --bs-btn-border-color: #80000B;
+  --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #80000B; --bs-btn-hover-border-color: #80000B;
+  --bs-btn-active-color: #fff; --bs-btn-active-bg: #5B0710; --bs-btn-active-border-color: #5B0710;
+  --bs-btn-focus-shadow-rgb: 128, 0, 11;
+}
+
+/* ---------- Pop up selamat datang ---------- */
+.modal-backdrop { --bs-backdrop-bg: #1c0004; --bs-backdrop-opacity: .6; backdrop-filter: blur(2px); }
+.modal-welcome .modal-dialog { max-width: 430px; }
+.modal-welcome .modal-content { border: 0; border-radius: 1rem; overflow: hidden; }
+.modal-welcome .modal-header {
+  flex-direction: column; align-items: center; text-align: center;
+  background: var(--maroon-dark); color: #fff; border: 0; padding: 1.1rem 1.25rem .95rem;
+}
+.modal-welcome .logo-modal { height: 60px; margin-bottom: .7rem; }
+.modal-welcome .judul { font-size: 1.3rem; font-weight: 700; line-height: 1.25; margin: 0; }
+.modal-welcome .sub { font-size: .78rem; font-weight: 600; letter-spacing: .14em; color: rgba(255, 255, 255, .9); margin: .3rem 0 0; }
+.modal-welcome .modal-body { padding: 1.1rem 1.5rem .6rem; }
+.modal-welcome .desc { font-size: .95rem; line-height: 1.55; color: var(--text-muted); margin: 0; text-align: center; }
+.modal-welcome .modal-footer { border: 0; justify-content: center; padding: .5rem 1.5rem 1.4rem; }
+.btn-lanjut { min-width: 160px; min-height: 48px; font-weight: 600; letter-spacing: .04em; border-radius: .5rem; }
+
+/* ---------- Responsif ---------- */
+@media (max-width: 575.98px) {
+  .logo-navbar { height: 34px; }
+  .brand-text { font-size: 1.05rem; }
+  .hero { padding: 1.5rem 0 1.1rem; }
+  .modal-welcome .modal-header { padding: 1rem 1rem .85rem; }
+  .modal-welcome .modal-body { padding: 1rem 1.1rem .5rem; }
+}
+@media (max-width: 359.98px) {
+  .brand { gap: .4rem; }
+  .brand-text { font-size: .95rem; letter-spacing: .03em; }
+  .btn-admin { padding-inline: .7rem; }
+}
+@media (max-height: 480px) {
+  .modal-welcome .logo-modal { height: 44px; margin-bottom: .4rem; }
+  .modal-welcome .judul { font-size: 1.1rem; }
+}

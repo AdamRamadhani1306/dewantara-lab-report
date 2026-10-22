@@ -1,0 +1,13 @@
+PANDUAN DEPLOY - DEWANTARA LAB REPORT (InfinityFree)
+
+1. Buat database: panel InfinityFree -> MySQL Databases -> buat database baru.
+   Catat hostname (sqlXXX.infinityfree.com), username, password, dan nama database (ber-prefix if0_...).
+2. Import: buka phpMyAdmin dari panel -> pilih database -> tab Import -> pilih database.sql -> Go.
+3. Edit koneksi.php: isi $db_host, $db_user, $db_pass, $db_name.
+   WAJIB ganti ADMIN_USER dan ADMIN_PASS.
+4. Upload: File Manager -> folder htdocs -> upload seluruh isi folder ini
+   (index.php, admin.php, update_status.php, koneksi.php, folder uploads/ beserta isinya).
+   Hapus file default index2.html bawaan InfinityFree bila ada.
+5. Folder uploads/: pastikan ada di htdocs/uploads/ (jika belum, buat folder baru bernama "uploads").
+   Permission 755 (atau 777 jika upload gagal).
+6. Akses: https://namadomain.infinityfree.me/ (form) dan /admin.php (dashboard).
